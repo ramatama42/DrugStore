@@ -22,7 +22,7 @@
             android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Pahlawan"
+            android:text="Nama Apotik"
             android:padding="6dp"
             style="@style/TextAppearance.AppCompat.Large"/>
 
@@ -30,10 +30,16 @@
             android:id="@+id/tv_tentang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tentang Pahlawan"
+            android:text="Tentang Apotik"
             android:padding="6dp"
             android:justificationMode="inter_word"
             style="@style/TextAppearance.AppCompat.Medium"/>
+
+        <Button
+            android:id="@+id/btn_lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LIHAT LOKASI"/>
 
     </LinearLayout>
 

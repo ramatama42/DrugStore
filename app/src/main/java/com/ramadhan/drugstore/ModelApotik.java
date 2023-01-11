@@ -1,7 +1,8 @@
 package com.ramadhan.drugstore;
 
 public class ModelApotik {
-    private String nama, tentang, foto, kordinat;
+
+    public String nama,tentang,foto,kordinat;
 
     public String getNama() {
         return nama;
@@ -34,5 +35,4 @@ public class ModelApotik {
     public void setKordinat(String kordinat) {
         this.kordinat = kordinat;
     }
-}
 }
