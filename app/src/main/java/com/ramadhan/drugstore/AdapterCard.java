@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder> {
         private ArrayList<ModelApotik> dataApotik;
 
-        public AdapterCard(){this.dataApotik = dataApotik; }
+        public AdapterCard(ArrayList<ModelApotik> dataApotik){this.dataApotik = dataApotik; }
 
         @NonNull
         @Override
@@ -53,8 +53,6 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.CardViewHolder
                     intent.putExtra("xkordinat", kordinat);
 
                     holder.itemView.getContext().startActivity(intent);
-
-
 
                 }
             });

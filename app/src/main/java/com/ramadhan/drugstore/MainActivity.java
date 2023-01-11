@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void tampilDataCard(){
         rvApotik.setLayoutManager(new LinearLayoutManager(this));
-        AdapterCard brideCard = new AdapterCard();
+        AdapterCard brideCard = new AdapterCard(data);
         rvApotik.setAdapter(brideCard);
     }
 
