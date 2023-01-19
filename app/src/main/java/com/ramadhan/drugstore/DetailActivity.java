@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class DetailActivity extends AppCompatActivity {
     private ImageView ivFoto;
     private TextView tvNama, tvTentang;
-    private String xNama, xTentang, xFoto, xKordinat;
+    private String yNama, yTentang, yFoto, yKordinat;
     private Button btnLokasi;
 
     @Override
@@ -31,25 +31,25 @@ public class DetailActivity extends AppCompatActivity {
         btnLokasi = findViewById(R.id.btn_lokasi);
 
         Intent terima = getIntent();
-        xNama = terima.getStringExtra("xNama");
-        xTentang = terima.getStringExtra("xTentang");
-        xFoto = terima.getStringExtra("xFoto");
-        xKordinat = terima.getStringExtra("xKordinat");
+        yNama = terima.getStringExtra("xNama");
+        yTentang = terima.getStringExtra("xTentang");
+        yFoto = terima.getStringExtra("xFoto");
+        yKordinat = terima.getStringExtra("xKordinat");
 
-        btnLokasi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Uri urilokasi = Uri.parse("geo:0,0?q=" + xKordinat);
-                Intent lokasi = new Intent(Intent.ACTION_VIEW, urilokasi);
-                startActivity(lokasi);
-            }
-        });
+       btnLokasi.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Uri urilokasi = Uri.parse("geo:0?q=" + yKordinat);
+               Intent lokasi = new Intent(Intent.ACTION_VIEW, urilokasi);
+               startActivity(lokasi);
+           }
+       });
 
-        tvNama.setText(xNama);
-        tvTentang.setText(xTentang);
+        tvNama.setText(yNama);
+        tvTentang.setText(yTentang);
         Glide
                 .with(DetailActivity.this)
-                .load(xFoto)
+                .load(yFoto)
                 .into(ivFoto);
     }
 }
